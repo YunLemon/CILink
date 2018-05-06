@@ -1,0 +1,25 @@
+<h1>Repository List</h1>
+<%= form_tag("/repository/index", method: "get") do %>
+  <%= label_tag(:builds, "Builds: ") %>
+  <%= text_field_tag(:builds) %>
+  <%= label_tag(:stars, "Stars: ") %>
+  <%= text_field_tag(:stars) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Repo_name</th>
+    <th>Stras</th>
+    <th>Builds</th>
+  </tr>
+  <% @repo.each do |repo| %>
+    <tr>
+      <td><%= repo.id %></td>
+      <td><%= link_to repo.repo_name, "repository/log?repo=#{repo.repo_name}" %></td>
+      <td><%= repo.stars %></td>
+      <td><%= repo.builds %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate @repo %>
