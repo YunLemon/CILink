@@ -15,7 +15,13 @@ class RepositoryController < ApplicationController
     #send_file '/Users/zhangchen/projects/bodyLog2/build_logs/cucumber@cucumber-jvm/1035@1.log', type: 'text/plain; charset=utf-8', disposition: 'inline'
     #render plain: params[:repo]
     repo = TravisJavaRepository.find(params[:repo])
-    @jobs = repo.java_repo_build_data.paginate(:page => params[:page], :per_page => 100).order('job_number')
+    branch = params[:branch]
+    if branch
+      @jobs = repo.java_repo_build_data.where("build_branch = ?", branch).paginate(:page => params[:page], :per_page => 100).order('job_number')
+    else
+      @jobs = repo.java_repo_build_data.paginate(:page => params[:page], :per_page => 100).order('job_number')
+    end
+
   end
 
   def log
