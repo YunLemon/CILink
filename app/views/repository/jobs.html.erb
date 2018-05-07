@@ -1,19 +1,21 @@
 <h1>Jobs</h1>
 <table>
   <tr>
-    <th>Job Number</th>
-    <th>Job State</th>
+    <th>Number</th>
+    <th>State</th>
     <th>Branch</th>
     <th>Compare Url</th>
     <th>Log</th>
+    <th>Message</th>
   </tr>
   <% @jobs.each do |job| %>
     <tr>
       <td><%= job.job_number %></td>
       <td><%= job.job_state %></td>
       <td><%= job.build_branch %></td>
-      <td><%= job.commit_compare_url %></td>
+      <td><%= link_to nil, job.commit_compare_url %></td>
       <td><%= link_to 'log', "/repository/log?repo=#{job.repo_name}&job_number=#{job.job_number}" %></td>
+      <td><%= job.commit_message %></td>
     </tr>
   <% end %>
 </table>
