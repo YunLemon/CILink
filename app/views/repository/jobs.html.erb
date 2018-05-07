@@ -19,4 +19,4 @@
     </tr>
   <% end %>
 </table>
-<%= will_paginate @jobs %>
+<%= will_paginate @jobs, :inner_window => 10 %>
