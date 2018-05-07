@@ -1,5 +1,7 @@
 <h1>Repository List</h1>
 <%= form_tag("/repository/index", method: "get") do %>
+  <%= label_tag(:repo_name, "Repo: ") %>
+  <%= text_field_tag(:repo_name) %>
   <%= label_tag(:builds, "Builds: ") %>
   <%= text_field_tag(:builds) %>
   <%= label_tag(:stars, "Stars: ") %>
@@ -15,8 +17,8 @@
   </tr>
   <% @repo.each do |repo| %>
     <tr>
-      <td><%= repo.id %></td>
-      <td><%= link_to repo.repo_name, "repository/log?repo=#{repo.repo_name}" %></td>
+      <td><%= repo.repo_id %></td>
+      <td><%= link_to repo.repo_name, "/repository/jobs?repo=#{repo.repo_name}" %></td>
       <td><%= repo.stars %></td>
       <td><%= repo.builds %></td>
     </tr>
