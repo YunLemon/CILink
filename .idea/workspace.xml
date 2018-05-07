@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30d844e0-a614-4382-971b-458e00b9cb66" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/repository_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/repository_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/repository/jobs.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/repository/jobs.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -38,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jobs.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jobs.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/repository/jobs.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -47,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="repository_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="repository_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/repository_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="405">
+              <caret line="27" column="145" selection-start-line="27" selection-start-column="145" selection-end-line="27" selection-end-column="145" />
             </state>
           </provider>
         </entry>
@@ -90,8 +89,8 @@
         <option value="$PROJECT_DIR$/app/views/repository/log.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/repository/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/repository/jobs.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/repository_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/repository/jobs.html.erb" />
       </list>
     </option>
   </component>
@@ -325,12 +324,12 @@
       <workItem from="1525577094271" duration="9189000" />
       <workItem from="1525655024320" duration="2593000" />
       <workItem from="1525687315047" duration="247000" />
-      <workItem from="1525690854862" duration="1739000" />
+      <workItem from="1525690854862" duration="1820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32418000" />
+    <option name="totallyTimeSpent" value="32499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -656,13 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/travis_java_repository.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/repository/repo.html.erb" />
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -678,17 +670,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/repository/jobs.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/travis_java_repository.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="15">
+          <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/repository_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="405">
+          <caret line="27" column="145" selection-start-line="27" selection-start-column="145" selection-end-line="27" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/repository/jobs.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
         </state>
       </provider>
     </entry>
