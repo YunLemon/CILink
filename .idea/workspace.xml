@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30d844e0-a614-4382-971b-458e00b9cb66" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/java_repo_build_datum.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/repository/jobs.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/repository_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/repository_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/travis_java_repository.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/travis_java_repository.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/repository/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/repository/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -46,8 +40,8 @@
       <file leaf-file-name="repository_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/repository_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="345">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -319,12 +313,12 @@
       <workItem from="1525099487168" duration="558000" />
       <workItem from="1525139212321" duration="5101000" />
       <workItem from="1525577094271" duration="9189000" />
-      <workItem from="1525655024320" duration="2234000" />
+      <workItem from="1525655024320" duration="2391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30073000" />
+    <option name="totallyTimeSpent" value="30230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -625,8 +619,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/repository_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>

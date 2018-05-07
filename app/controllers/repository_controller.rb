@@ -18,6 +18,6 @@ class RepositoryController < ApplicationController
   end
 
   def log
-    send_file "/home/fdse/user/zc/bodyLog2/build_logs/#{params[:repo].sub(/\./, '@')}/job@#{params[:job_number].sub(/\./, '@')}.log", type: 'text/plain; charset=utf-8', disposition: 'inline'
+    send_file "/home/fdse/user/zc/bodyLog2/build_logs/#{params[:repo].sub(/\//, '@')}/job@#{params[:job_number].sub(/\./, '@')}.log", type: 'text/plain; charset=utf-8', disposition: 'inline'
   end
 end
