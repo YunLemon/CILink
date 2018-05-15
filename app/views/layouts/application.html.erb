@@ -3,12 +3,15 @@
   <head>
     <title>CILink</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'table' %>
+    <%= stylesheet_link_tag    'div' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div>
+      <%= yield %>
+    </div>
   </body>
 </html>

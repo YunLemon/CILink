@@ -4,9 +4,9 @@ class RepositoryController < ApplicationController
     @stars = params[:stars] || 25
     @repo_name = params[:repo_name]
     if @repo_name
-      @repo = TravisJavaRepository.where("repo_name LIKE ? AND repo_id >= ? AND builds > ? AND stars>?", '%' + @repo_name + '%', 1,  @builds.to_i, @stars.to_i).paginate(:page => params[:page], :per_page => 30).order('repo_id')
+      @repo = TravisJavaRepository.where("repo_name LIKE ? AND id >= ? AND builds > ? AND stars>?", '%' + @repo_name + '%', 1,  @builds.to_i, @stars.to_i).paginate(:page => params[:page], :per_page => 30).order('id')
     else
-      @repo = TravisJavaRepository.where("repo_id >= ? AND builds > ? AND stars>?", 1, @builds.to_i, @stars.to_i).paginate(:page => params[:page], :per_page => 30).order('repo_id')
+      @repo = TravisJavaRepository.where("id >= ? AND builds > ? AND stars>?", 1, @builds.to_i, @stars.to_i).paginate(:page => params[:page], :per_page => 30).order('id')
     end
 
   end

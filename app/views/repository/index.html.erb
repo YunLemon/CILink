@@ -1,4 +1,4 @@
-<h1>Repository List</h1>
+<h1>Scanning Repositories List</h1>
 <%= form_tag("/repository/index", method: "get") do %>
   <%= label_tag(:repo_name, "Repo: ") %>
   <%= text_field_tag(:repo_name) %>
@@ -17,7 +17,7 @@
   </tr>
   <% @repo.each do |repo| %>
     <tr>
-      <td><%= repo.repo_id %></td>
+      <td><%= repo.id %></td>
       <td><%= link_to repo.repo_name, "/repository/jobs?repo=#{repo.repo_name}" %></td>
       <td><%= repo.stars %></td>
       <td><%= repo.builds %></td>
