@@ -18,7 +18,7 @@
   <% @repo.each do |repo| %>
     <tr>
       <td><%= repo.id %></td>
-      <td><%= link_to repo.repo_name, "/repository/jobs?repo=#{repo.repo_name}" %></td>
+      <td><%= link_to repo.repo_name, "/repository/jobs?repo_id=#{repo.id}" %></td>
       <td><%= repo.stars %></td>
       <td><%= repo.builds %></td>
     </tr>

@@ -20,8 +20,8 @@
         "\\json_files"
     ],
     "generatedFiles": {
-        "uploadOnSave": false,
-        "extensionsToInclude": [],
+        "uploadOnSave": true,
+        "extensionsToInclude": [".js", ".css", ".rb", ".erb", ".html", ".yml"],
         "path": ""
     }
 }
