@@ -1,4 +1,4 @@
-class RepositoryController < ApplicationController
+class RepositoriesController < ApplicationController
   def index
     @builds = params[:builds] || 50
     @stars = params[:stars] || 25
