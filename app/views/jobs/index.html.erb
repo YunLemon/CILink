@@ -14,7 +14,7 @@
       <td><%= job.job_state %></td>
       <td><%= link_to job.build_branch, "/repository/jobs?repo_id=#{job.travis_java_repository_id}&branch=#{job.build_branch}" %></td>
       <td><%= link_to nil, job.commit_compare_url %></td>
-      <td><%= link_to 'log', "/repository/log?repo=#{job.repo_name}&job_number=#{job.job_number}" %></td>
+      <td><%= link_to 'log', job_log_path(job) %></td>
       <td><%= job.commit_message %></td>
     </tr>
   <% end %>

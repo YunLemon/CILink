@@ -1,27 +1,26 @@
-<h1>Scanning Repositories List</h1>
-<%= form_tag("/repository/index", method: "get") do %>
-  <%= label_tag(:repo_name, "Repo: ") %>
-  <%= text_field_tag(:repo_name) %>
-  <%= label_tag(:builds, "Builds: ") %>
-  <%= text_field_tag(:builds) %>
-  <%= label_tag(:stars, "Stars: ") %>
-  <%= text_field_tag(:stars) %>
-  <%= submit_tag("Search") %>
-<% end %>
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Repo_name</th>
-    <th>Stars</th>
-    <th>Builds</th>
-  </tr>
-  <% @repo.each do |repo| %>
-    <tr>
-      <td><%= repo.id %></td>
-      <td><%= link_to repo.repo_name, "/repository/jobs?repo_id=#{repo.id}" %></td>
-      <td><%= repo.stars %></td>
-      <td><%= repo.builds %></td>
-    </tr>
+<div class="header">
+  <h1>Java Repositories List</h1>
+
+  <%= form_tag("/repository/index", method: "get") do %>
+    <%= label_tag(:repo_name, "Repo: ") %>
+    <%= text_field_tag(:repo_name) %>
+    <%= label_tag(:builds, "Builds: ") %>
+    <%= text_field_tag(:builds) %>
+    <%= label_tag(:stars, "Stars: ") %>
+    <%= text_field_tag(:stars) %>
+    <%= submit_tag("Search", class: "search") %>
   <% end %>
-</table>
+</div>
+
+
+<% @repo.each do |repo| %>
+  <div class="tableRow">
+    <div class="item">
+        <span class="rid">ID <%= repo.id %></span>
+        <span class="rname"><%= link_to repo.repo_name, repository_jobs_path(repo) %></span>
+        <span class="rstars">Star <%= repo.stars %></span>
+        <span class="rbuilds">Build <%= repo.builds %></span>
+    </div>
+  </div>
+<% end %>
 <%= will_paginate @repo %>

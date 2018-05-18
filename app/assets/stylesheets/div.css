@@ -1,6 +1,91 @@
+*{margin:0;padding:0;}
+
 div {
-    text-align: center; /*让div内部文字居中*/
+    text-align: center;
     background-color: #fff;
-    border-radius: 20px;
     margin: 0 auto;
+}
+
+div.header {
+    background:rgb(200, 153, 1); 
+    opacity: 0.8;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+label {
+    margin: 0 10px 0 10px;
+    padding: 5px;
+    text-align: right;
+    width: 100px;
+}
+
+input {
+    border-radius: 5px;
+    padding: 5px 5px 5px 30px;
+    width: 155px;
+}
+
+.search {
+    margin-left: 10px;
+    background: rgb(233, 129, 207);
+    opacity: 0.8;
+    color: aliceblue;
+}
+
+div.tableRow {
+    
+    background-color:  red;
+    border: 1px solid rgb(179, 181, 189); 
+    opacity: 0.8;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 80%;
+    height: 80px;
+}
+
+div.item {
+    height: 80px;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+}
+
+span {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 15px;
+}
+span.rid {
+    width: 7%;
+}
+
+span.rname {
+    width: 60%;
+    text-align: center;
+}
+
+span.rstars {
+    width: 7%;
+    background-image: url(../images/timg.jpg);
+    background-position: -50px -30px；
+    background-repeat: repeat;
+    background-size: 5px;
+}
+
+span.rbuilds {
+    width: 7%;
 }
