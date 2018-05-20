@@ -1,22 +1,14 @@
 <h1>Jobs</h1>
-<table>
-  <tr>
-    <th>Number</th>
-    <th>State</th>
-    <th>Branch</th>
-    <th>Compare Url</th>
-    <th>Log</th>
-    <th>Message</th>
-  </tr>
-  <% @jobs.each do |job| %>
-    <tr>
-      <td><%= job.job_number %></td>
-      <td><%= job.job_state %></td>
-      <td><%= link_to job.build_branch, "/repository/jobs?repo_id=#{job.travis_java_repository_id}&branch=#{job.build_branch}" %></td>
-      <td><%= link_to nil, job.commit_compare_url %></td>
-      <td><%= link_to 'log', job_log_path(job) %></td>
-      <td><%= job.commit_message %></td>
-    </tr>
-  <% end %>
-</table>
+
+<% @jobs.each do |job| %>
+  <div class="tableRow">
+    <div class="item">
+        <span class="jnumber"><%= job.job_number %></span>
+        <span class="jstate"><%= job.job_state %></span>
+        <span class="jbranch"><%= link_to job.build_branch, "/repository/jobs?repo_id=#{job.travis_java_repository_id}&branch=#{job.build_branch}" %></span>
+        <span class="jlog"><%= link_to 'log', job_log_path(job) %></span>
+         <span class="jmessage"><p><%= job.commit_message %></p></span>
+    </div>
+  </div>
+<% end %>
 <%= will_paginate @jobs, :inner_window => 10 %>

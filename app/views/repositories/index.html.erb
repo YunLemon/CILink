@@ -16,10 +16,10 @@
 <% @repo.each do |repo| %>
   <div class="tableRow">
     <div class="item">
-        <span class="rid">ID <%= repo.id %></span>
-        <span class="rname"><%= link_to repo.repo_name, repository_jobs_path(repo) %></span>
-        <span class="rstars">Star <%= repo.stars %></span>
-        <span class="rbuilds">Build <%= repo.builds %></span>
+        <div class="rid">ID <%= repo.id %></div>
+        <div class="rname"><%= link_to repo.repo_name, repository_jobs_path(repo) %></div>
+        <div class="rstars">Star <%= repo.stars %></div>
+        <div class="rbuilds">Build <%= repo.builds %></div>
     </div>
   </div>
 <% end %>
