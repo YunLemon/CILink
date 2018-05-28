@@ -1,13 +1,16 @@
-<h1>Jobs</h1>
-
+<div class="header" id="test" onclick="showMessage()">
+  <h1><%= @repo.repo_name %></h1>
+</div>
 <% @jobs.each do |job| %>
-  <div class="tableRow">
+  <% flag = (job.has_compiler_error == 1) ? 'tableRowRed' : 'tableRow' %>
+  <div class="<%= flag %>">
     <div class="item">
-        <span class="jnumber"><%= job.job_number %></span>
-        <span class="jstate"><%= job.job_state %></span>
-        <span class="jbranch"><%= link_to job.build_branch, "/repository/jobs?repo_id=#{job.travis_java_repository_id}&branch=#{job.build_branch}" %></span>
-        <span class="jlog"><%= link_to 'log', job_log_path(job) %></span>
-         <span class="jmessage"><p><%= job.commit_message %></p></span>
+        <div class="jnumber"><%= job.job_number %></div>
+        <div class="jstate"><%= job.job_state %></div>
+        <div class="jbranch"><%= link_to job.build_branch, repository_jobs_path(repository_id: job.travis_java_repository_id, branch: job.build_branch), :target => "_blank" %></div>
+        <div class="jlog"><%= link_to 'log', job_log_path(job) %></div>
+        <div class="jmatch"><%= link_to 'match', job_matches_path(job), :target => "_blank" %></div>
+        <div class="jmessage" onclick="showMessage(this)"><%= job.commit_message %></div>
     </div>
   </div>
 <% end %>

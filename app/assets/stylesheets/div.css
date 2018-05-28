@@ -6,7 +6,7 @@ div {
     margin: 0 auto;
 }
 
-div.header {
+.header {
     background: linear-gradient(#fb3, #58a);
     opacity: 0.8;
     color: aliceblue;
@@ -41,11 +41,18 @@ input {
 }
 
 .tableRow {
+    background-color: yellowgreen;
+    border: 1px solid rgb(179, 181, 189); 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 900px;
+    height: 80px;
+}
+
+.tableRowRed {
     background-color:  red;
     border: 1px solid rgb(179, 181, 189); 
-    opacity: 0.8;
-    color: aliceblue;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 10px;
@@ -59,6 +66,8 @@ div.item {
     text-align: center;
     vertical-align: middle;
     color: black;
+    line-height: 80px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .rid {
@@ -75,10 +84,44 @@ div.item {
 .rstars {
     float: left;
     width: 14%;
-    background: url(../images/timg.jpg);
 }
 
 .rbuilds {
     float: left;
     overflow: hidden;
+}
+
+.jnumber {
+    float: left;
+    width: 7%;
+}
+
+.jstate {
+    float: left;
+    width: 7%;
+}
+
+.jbranch {
+    float: left;
+    width: 40%;
+}
+
+.jlog {
+    float: left;
+    width: 7%;
+}
+
+.jmatch {
+    float: left;
+    width: 7%;
+}
+
+.jmessage {
+    float: left;
+    width: 28%;
+    text-align: left;
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;
 }

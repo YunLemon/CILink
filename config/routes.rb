@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   end
   resources :jobs do
     resource :log
+    resources :matches
   end
+
   root 'repositories#index'
 end

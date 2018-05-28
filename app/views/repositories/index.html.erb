@@ -14,10 +14,11 @@
 
 
 <% @repo.each do |repo| %>
-  <div class="tableRow">
+  <% flag = (repo.has_compiler_error == 1) ? 'tableRowRed' : 'tableRow' %>
+  <div class="<%= flag %>">
     <div class="item">
         <div class="rid">ID <%= repo.id %></div>
-        <div class="rname"><%= link_to repo.repo_name, repository_jobs_path(repo) %></div>
+        <div class="rname"><%= link_to repo.repo_name, repository_jobs_path(repo), :target => "_blank" %></div>
         <div class="rstars">Star <%= repo.stars %></div>
         <div class="rbuilds">Build <%= repo.builds %></div>
     </div>
