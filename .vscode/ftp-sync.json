@@ -1,6 +1,6 @@
 {
-    "remotePath": "/home/fdse/user/zc/CILink/",
-    "host": "10.141.221.85",
+    "remotePath": "/usr/zc/CILink/",
+    "host": "10.131.252.160",
     "username": "fdse",
     "password": "cloudfdse",
     "port": 22,
