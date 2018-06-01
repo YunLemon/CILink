@@ -1,1 +1,33 @@
-<textarea id="markItUp"></textarea>
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+  <a class="navbar-brand" href="#">  
+    <%= image_tag("travis.png", size: "90x30") %>
+  </a>
+  <div class="collapse navbar-collapse">
+    <div class="navbar-nav">
+      <%= link_to 'Home', repositories_path, class: "nav-item nav-link active" %>
+      <%= link_to  @job.repo_and_job, job_matches_path(@job), class: "nav-item nav-link" %>
+    </div>
+  </div>
+</nav>
+
+
+<% @matches.each do |match| %>
+  <div class="container rounded bg-info my-5 pt-3 pb-1 px-3">
+    <div class="row border rounded my-2 py-2  border-info bg-white"">
+      <div class="col-1">
+        Order <%= match.order_number %>
+      </div>
+      <div class="col-2">
+        Similarity <%= match.similarity %>
+      </div>
+      <div class="col-8">
+        <%= match.regex_value %>
+      </div>
+    </div>
+    <div class="row border rounded my-2 py-2  border-info bg-light"">
+      <div class="col-12">
+        <%= match.segment %>
+      </div>
+    </div>
+  </div>
+<% end %>
