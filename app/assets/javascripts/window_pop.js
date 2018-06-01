@@ -1,13 +1,13 @@
-console.log("window_pop.js loaded");
+$(function(){
+  $(document).on("mouseover", ".commit-message", function(){
+    $(this).attr({"data-content" : $(this).text()})
+    $(this).popover("show");
+  }); 
+  $(document).on("mouseout", ".commit-message", function(){
+    $(this).popover("hide");
+  }); 
+});
 
-var ready;
-ready = function() {
-
-  $("#test").on("click", function(event) {
-    alert("link clicked");
-  });
-
-};
-
-$(document).ready(ready);
-$(document).on("page:load", ready);
+$(document).ready(function() {
+  $("#markItUp").markItUp(mySettings);
+});
