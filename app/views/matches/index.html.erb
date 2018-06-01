@@ -1,16 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-  <a class="navbar-brand" href="#">  
-    <%= image_tag("travis.png", size: "90x30") %>
-  </a>
-  <div class="collapse navbar-collapse">
-    <div class="navbar-nav">
-      <%= link_to 'Home', repositories_path, class: "nav-item nav-link active" %>
-      <%= link_to  @job.repo_and_job, job_matches_path(@job), class: "nav-item nav-link" %>
-    </div>
-  </div>
-</nav>
-
-<ul class="nav nav-tabs" id="myTab" role="tablist">
+<ul class="nav nav-tabs fixed-top" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="log-tab" data-toggle="tab" href="#log" role="tab" aria-controls="log" aria-selected="true">Log</a>
   </li>
@@ -21,6 +9,7 @@
     <a class="nav-link" id="match-tab" data-toggle="tab" href="#match" role="tab" aria-controls="match" aria-selected="false">Match</a>
   </li>
 </ul>
+
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="log" role="tabpanel" aria-labelledby="log-tab">
     <code>
