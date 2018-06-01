@@ -7,6 +7,13 @@ $(function(){
     $(this).popover("hide");
   }); 
 });
+$(document).ready(function() {
+  //var stream = new AnsiStream()
+
+  //onStreamText: (text) ->
+  //  $('.code').append(stream.process(text))
+});
+
 
 $(document).ready(function() {
   $("#markItUp").markItUp(mySettings);

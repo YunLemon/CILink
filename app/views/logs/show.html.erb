@@ -1,4 +1,11 @@
-<p>
-    <%= @slice_segment %>
-</p>
+<code>
+    <% @slice_segment.each do |line| %>
+        <%= line %><br>
+    <% end %>
+</code>
 
+<code>
+    <% @log_file.each do |line| %>
+        <%= line %><br>
+    <% end %>
+</code>

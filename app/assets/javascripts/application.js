@@ -15,4 +15,5 @@
 //= require popper
 //= require bootstrap
 //= require turbolinks
+//= require ansi_stream
 //= require_tree .
