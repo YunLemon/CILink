@@ -27,10 +27,13 @@
       <div class="col-2">
         <%= link_to job.build_branch, repository_jobs_path(repository_id: job.travis_java_repository_id, branch: job.build_branch), :target => "_blank", class: link_color %>
       </div>
+      <div class="col-4">
+        <%= link_to compare_url(job.commit_compare_url, job.repo_name),  job.commit_compare_url %>
+      </div>
       <div class="col-1">
         <%= link_to 'match', job_matches_path(job), :target => "_blank", class: link_color %>
       </div>
-      <div class="col-7 commit-message ellipis" data-container="body" data-toggle="popover" data-placement="bottom">
+      <div class="col-3 commit-message ellipis" data-container="body" data-toggle="popover" data-placement="bottom">
         <%= job.commit_message %>
       </div>
     </div>
