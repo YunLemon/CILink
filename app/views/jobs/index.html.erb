@@ -5,10 +5,10 @@
   <div class="collapse navbar-collapse">
     <div class="navbar-nav">
       <%= link_to 'Home', repositories_path, class: "nav-item nav-link active" %>
-      <%= link_to  @repo.repo_name, repository_jobs_path(@repo), class: "nav-item nav-link" %>
+      <%= link_to  @repo.repo_name, repository_jobs_path(repository_id: @repo.id, sift: true), :target => "_blank", class: "nav-item nav-link" %>
     </div>
   </div>
-  <%= form_tag(repositories_path, method: "get", class: 'form-inline') do %>
+  <%= form_tag(repository_jobs_path(@repo), method: "get", class: 'form-inline') do %>
     <%= search_field_tag :search_text, nil, {class: 'form-control mr-sm-2', placeholder: "Job number/branch", 'aria-label': "Search"} %>
     <%= button_tag 'Search', class: 'btn btn-outline-success my-2 my-sm-0' %>
   <% end %>
