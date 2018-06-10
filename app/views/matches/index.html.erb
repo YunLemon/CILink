@@ -43,7 +43,9 @@
         </div>
         <div class="row border rounded my-2 py-2  border-info bg-light">
           <div class="col-12">
-            <%= match.segment %>
+            <% match.segment.lines.each do |line| %>
+              <%= line %><br>
+            <% end %>
           </div>
         </div>
       </div>
